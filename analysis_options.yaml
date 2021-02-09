@@ -1,0 +1,4 @@
+include: package:lint/analysis_options.yaml
+
+always_specify_types: false
+sort_constructors_first: true

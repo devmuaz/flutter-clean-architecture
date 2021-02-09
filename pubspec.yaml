@@ -1,0 +1,62 @@
+name: flutter_news_app
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.0
+  
+  flutter_hooks: ^0.15.0
+  get_it: ^5.0.3
+  retrofit: ^1.3.4+1
+  floor: ^0.18.0
+  
+  flutter_bloc: ^6.1.1
+  equatable: ^1.2.5
+
+  # icons
+  ionicons: ^0.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  retrofit_generator: ^1.4.1
+  floor_generator: ^0.18.0
+  build_runner: ^1.10.11
+  lint: ^1.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # Assets
+  # assets:
+  #   - assets/images/
+  # Fonts
+  fonts:
+    - family: Butler
+      fonts:
+        - asset: assets/fonts/Butler_Bold.ttf
+        - asset: assets/fonts/Butler_Light.ttf
+        - asset: assets/fonts/Butler_Regular.ttf
+
+    - family: IBM
+      fonts:
+        - asset: assets/fonts/IBMPlexSans-Bold.ttf
+        - asset: assets/fonts/IBMPlexSans-Light.ttf
+        - asset: assets/fonts/IBMPlexSans-Regular.ttf
