@@ -1,16 +1,19 @@
-# flutter_clean_architecture
+# Flutter Clean Archeticture Series 🌍
+"Making the world a better place"
 
-A new Flutter project.
+### ✅ Full Articles
+You can check out the full Medium articles on [devmuaz](devmuaz.medium.com) 
 
-## Getting Started
+### ✅ Branches
+- Part 1 - [Setup](https://github.com/devmuaz/flutter_clean_architecture/tree/part1_setup)
+- Part 2 - [Remote Data](https://github.com/devmuaz/flutter_clean_architecture/tree/part2_remote_data)
 
-This project is a starting point for a Flutter application.
+### ✅ Feedback
+If you find something wrong or anything else, you can always reach me at
+- [Instagram](https://www.instagram.com/devmuaz/)
+- [Facebook](https://www.facebook.com/devmuaz)
+- [Twitter](https://twitter.com/devmuaz)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Support
+If you liked the series and all stuff about it, then consider givig me support ❤️ by Clapping 👏  my Medium articles and giving this repo a Star ⭐️
