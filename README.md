@@ -5,6 +5,7 @@
 You can check out the full Medium articles on [devmuaz](devmuaz.medium.com) 
 
 ### ✅ Branches
+- Part 1 - [Setup](https://github.com/devmuaz/flutter_clean_architecture/tree/part1_setup)
 - Part 2 - [Remote Data](https://github.com/devmuaz/flutter_clean_architecture/tree/part2_remote_data)
 - Part 3 - [Local Data](https://github.com/devmuaz/flutter_clean_architecture/tree/part3_local_data)
 
