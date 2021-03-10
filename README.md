@@ -2,7 +2,7 @@
 "Making the world a better place"
 
 ### ✅ Full Articles
-You can check out the full Medium articles on [devmuaz](devmuaz.medium.com) 
+You can check out the full Medium articles on [devmuaz](https://devmuaz.medium.com/) 
 
 ### ✅ Branches
 - Part 1 - [Setup](https://github.com/devmuaz/flutter_clean_architecture/tree/part1_setup)
