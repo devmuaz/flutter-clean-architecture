@@ -17,8 +17,7 @@ class ApiRepositoryImpl extends BaseApiRepository implements ApiRepository {
     return getStateOf<BreakingNewsResponse>(
       request: () => _newsApiService.getBreakingNewsArticles(
         apiKey: request.apiKey,
-        country: request.country,
-        category: request.category,
+        sources: request.sources,
         page: request.page,
         pageSize: request.pageSize,
       ),

@@ -23,16 +23,14 @@ class _NewsApiService implements NewsApiService {
   @override
   Future<HttpResponse<BreakingNewsResponse>> getBreakingNewsArticles({
     apiKey,
-    country,
-    category,
+    sources,
     page,
     pageSize,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'apiKey': apiKey,
-      r'country': country,
-      r'category': category,
+      r'sources': sources,
       r'page': page,
       r'pageSize': pageSize,
     };
