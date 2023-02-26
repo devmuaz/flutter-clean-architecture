@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppTheme {
+abstract class AppTheme {
   static ThemeData get light {
     return ThemeData(
       appBarTheme: const AppBarTheme(
@@ -9,9 +9,9 @@ class AppTheme {
       ),
       scaffoldBackgroundColor: Colors.white,
       primaryColor: Colors.black,
-      accentColor: Colors.black,
       splashColor: Colors.transparent,
       fontFamily: 'IBM',
+      colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.black),
     );
   }
 }

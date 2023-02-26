@@ -1,4 +1,13 @@
-include: package:lint/analysis_options.yaml
+analyzer:
+  exclude:
+    - /**/*.g.dart
 
-always_specify_types: false
-sort_constructors_first: true
+linter:
+  rules:
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+    avoid_redundant_argument_values: true
+    prefer_relative_imports: true
+    depend_on_referenced_packages: false
+    library_private_types_in_public_api: false
+    use_build_context_synchronously: false

@@ -4,48 +4,40 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:ionicons/ionicons.dart';
 
-import '../../domain/entities/article.dart';
-import '../../injector.dart';
-import '../blocs/local_articles/local_articles_bloc.dart';
+import '../../config/router/app_router.dart';
+import '../../domain/models/article.dart';
+import '../cubits/local_articles/local_articles_cubit.dart';
 import '../widgets/article_widget.dart';
 
 class SavedArticlesView extends HookWidget {
-  const SavedArticlesView({Key key}) : super(key: key);
+  const SavedArticlesView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => injector<LocalArticlesBloc>()..add(const GetAllSavedArticles()),
-      child: Scaffold(
-        appBar: _buildAppBar(),
-        body: _buildBody(),
-      ),
-    );
-  }
-
-  PreferredSizeWidget _buildAppBar() {
-    return AppBar(
-      leading: Builder(
-        builder: (context) => GestureDetector(
+    return Scaffold(
+      appBar: AppBar(
+        leading: GestureDetector(
           behavior: HitTestBehavior.opaque,
-          onTap: () => _onBackButtonTapped(context),
+          onTap: () => appRouter.pop(),
           child: const Icon(Ionicons.chevron_back, color: Colors.black),
         ),
+        title: const Text(
+          'Saved Articles',
+          style: TextStyle(color: Colors.black),
+        ),
       ),
-      title: const Text('Saved Articles', style: TextStyle(color: Colors.black)),
-    );
-  }
-
-  Widget _buildBody() {
-    return BlocBuilder<LocalArticlesBloc, LocalArticlesState>(
-      builder: (context, state) {
-        if (state is LocalArticlesLoading) {
-          return const Center(child: CupertinoActivityIndicator());
-        } else if (state is LocalArticlesDone) {
-          return _buildArticlesList(state.articles);
-        }
-        return Container();
-      },
+      body: BlocBuilder<LocalArticlesCubit, LocalArticlesState>(
+        builder: (_, state) {
+          switch (state.runtimeType) {
+            case LocalArticlesLoading:
+              return const Center(child: CupertinoActivityIndicator());
+            case LocalArticlesSuccess:
+              return _buildArticlesList(state.articles);
+            default:
+              return const SizedBox();
+          }
+        },
+      ),
     );
   }
 
@@ -64,22 +56,13 @@ class SavedArticlesView extends HookWidget {
         return ArticleWidget(
           article: articles[index],
           isRemovable: true,
-          onRemove: (article) => _onRemoveArticle(context, article),
-          onArticlePressed: (article) => _onArticlePressed(context, article),
+          onRemove: (article) => BlocProvider.of<LocalArticlesCubit>(context)
+              .removeArticle(article: article),
+          onArticlePressed: (article) => appRouter.push(
+            ArticleDetailsViewRoute(article: article),
+          ),
         );
       },
     );
-  }
-
-  void _onBackButtonTapped(BuildContext context) {
-    Navigator.pop(context);
-  }
-
-  void _onRemoveArticle(BuildContext context, Article article) {
-    BlocProvider.of<LocalArticlesBloc>(context).add(RemoveArticle(article));
-  }
-
-  void _onArticlePressed(BuildContext context, Article article) {
-    Navigator.pushNamed(context, '/ArticleDetailsView', arguments: article);
   }
 }
