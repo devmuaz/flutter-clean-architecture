@@ -2,7 +2,7 @@
 
 "Making the world a better place"
 
-`Note: These articles have been updated in 2023/02/22 as well as the source code to meet the latest changes occurred in the Flutter framework.`
+`Note: The Medium articles have been updated in 2023/02/22 as well as the source code to meet the latest changes occurred in the Flutter framework.`
 
 ### ✅ Demo App
 
