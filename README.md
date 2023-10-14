@@ -1,5 +1,5 @@
 # Flutter Clean Archeticture Series (Updated) 🌍
-
+# I Stand with Palestine 🇵🇸
 "Making the world a better place"
 
 **NEW CONTENT**
