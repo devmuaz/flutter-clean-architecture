@@ -23,8 +23,7 @@ class ArticleWidget extends StatelessWidget {
       behavior: HitTestBehavior.opaque,
       onTap: _onTap,
       child: Container(
-        padding: const EdgeInsetsDirectional.only(
-            start: 14, end: 14, bottom: 7, top: 7),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         height: MediaQuery.of(context).size.width / 2.2,
         child: Row(
           children: [
