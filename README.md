@@ -1,6 +1,4 @@
 # Flutter Clean Archeticture Series (Updated) 🌍
-# I Stand with Palestine 🇵🇸
-"From the river to the sea, Palestine will be free"
 
 **NEW CONTENT**
 
